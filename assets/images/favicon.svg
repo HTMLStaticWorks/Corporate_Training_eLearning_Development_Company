@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ElevateLMS favicon">
+  <rect width="64" height="64" rx="16" fill="#071826"/>
+  <path d="M20 18h24c4.4 0 8 3.6 8 8v12c0 4.4-3.6 8-8 8H20c-4.4 0-8-3.6-8-8V26c0-4.4 3.6-8 8-8z" fill="#2563EB"/>
+  <path d="M24 24h16v4H24zM24 32h10v4H24z" fill="#F8FAFC"/>
+  <circle cx="44" cy="24" r="4" fill="#22C55E"/>
+</svg>
