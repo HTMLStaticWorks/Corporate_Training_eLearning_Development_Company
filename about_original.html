@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TutorMarket</title>
+    <meta name="description" content="Learn about our company.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container navbar-inner"
+            style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
+            <div class="logo">
+                <a href="index.html"
+                    style="font-size: 1.75rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 0.5rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        style="width: 32px; height: 32px; color: var(--secondary);">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                    Tutor<span style="color: var(--text-primary)">Market</span>
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li class="dropdown" style="position: relative;">
+                    <a href="javascript:void(0)" class="dropdown-toggle" style="display: flex; align-items: center; gap: 4px;">
+                        Home <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <ul class="dropdown-menu" style="position: absolute; top: 100%; left: 0; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 0.5rem 0; min-width: 150px; display: none; flex-direction: column; gap: 0.5rem; box-shadow: var(--shadow-hover);">
+                        <li><a href="index.html" style="display: block; padding: 0.5rem 1.5rem;">Home 1</a></li>
+                        <li><a href="home-2.html" style="display: block; padding: 0.5rem 1.5rem;">Home 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="subjects.html">Subjects</a></li>
+                <li><a href="tutors.html">Tutors</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+                
+                
+                <li class="mobile-action-row mobile-only" style="flex-direction: column; gap: 1rem; align-items: center; width: 100%; margin-top: 1rem;">
+                    <div style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; width: 100%;">
+                        <a href="dashboard.html" class="btn-icon-only" aria-label="Dashboard">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px;"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                        </a>
+                        <button class="btn-icon-only dark-mode-toggle" aria-label="Dark Mode">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 20px; height: 20px;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        </button>
+                        <button class="btn-icon-only rtl-toggle" aria-label="Toggle RTL">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px;">
+                                <path d="M14 4l4 4-4 4"></path><path d="M18 8H4"></path><path d="M10 20l-4-4 4-4"></path><path d="M6 16h14"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <a href="register.html" class="btn btn-primary mobile-signup" style="width: 80%; text-align: center;">Sign Up</a>
+                </li>
+            </ul>
+
+            <div class="nav-actions" style="display: flex; gap: 1rem; align-items: center;">
+                <button id="darkModeToggle" class="btn-icon-only"
+                    style="background: transparent; border: none; cursor: pointer; color: var(--text-primary);"
+                    aria-label="Dark Mode">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="width: 24px; height: 24px;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="dashboard.html" class="btn-icon-only"
+                    style="background: transparent; border: none; cursor: pointer; color: var(--text-primary); display: flex; align-items: center; justify-content: center;"
+                    aria-label="Dashboard">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="width: 24px; height: 24px;">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                </a>
+                <button id="rtlToggle" class="btn-icon-only"
+                    style="background: transparent; border: none; cursor: pointer; color: var(--text-primary);"
+                    aria-label="Toggle RTL">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"
+                        style="width: 24px; height: 24px;">
+                        <path d="M14 4l4 4-4 4"></path>
+                        <path d="M18 8H4"></path>
+                        <path d="M10 20l-4-4 4-4"></path>
+                        <path d="M6 16h14"></path>
+                    </svg>
+                </button>
+                <a href="register.html" class="btn btn-primary desktop-signup" style="padding: 0.6rem 1.5rem; font-size: 1rem;">Sign
+                    Up</a>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 24px; height: 24px;">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: HERO -->
+    <header class="hero section-alt" style="padding: 8rem 0; text-align: center;">
+        <div class="container reveal">
+            <h1 style="font-size: clamp(36px, 5vw, 54px); margin-bottom: 1rem;">About <span
+                    class="text-gradient">Us</span></h1>
+            <p style="max-width: 600px; margin: 0 auto;">Learn more about our mission and the team.</p>
+        </div>
+    </header>
+    <!-- SECTION 2: STORY -->
+    <section style="padding: 6rem 0;">
+        <div class="container grid about-content-grid" style="grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem;">
+            <div class="reveal">
+                <span class="section-subtitle">Our Origins</span>
+                <h2 style="margin-bottom: 1.5rem;">How We Started</h2>
+                <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Founded in 2026,
+                    TutorMarket began with a simple belief: every student deserves access to world-class education,
+                    regardless of their location.</p>
+                <p style="font-size: 1.125rem; color: var(--text-secondary);">We saw a gap between passionate educators
+                    and eager students. By building a secure, intuitive, and feature-rich platform, we bridged that gap
+                    to create a thriving global learning community.</p>
+            </div>
+            <div class="reveal">
+                <img src="assets/images/abt-img.jpg" alt="Students studying together"
+                    style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: MISSION -->
+    <section class="section-alt" style="padding: 6rem 0;">
+        <div class="container grid about-content-grid" style="grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem;">
+            <div class="reveal" style="order: 2;">
+                <span class="section-subtitle">Our Vision</span>
+                <h2 style="margin-bottom: 1.5rem;">Empowering the Future</h2>
+                <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Our mission is to
+                    provide accessible, high-quality, and personalized tutoring to every student. We believe that with
+                    the right guidance, any academic hurdle can be overcome.</p>
+                <div style="display: flex; gap: 1rem; align-items: center; margin-top: 2rem;">
+                    <div
+                        style="width: 50px; height: 50px; border-radius: 50%; background: var(--secondary-light); color: var(--secondary); display: flex; align-items: center; justify-content: center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0;">100% Quality Guarantee</h4>
+                        <p style="margin: 0; font-size: 0.875rem; color: var(--text-secondary);">Vetted tutors & proven
+                            results.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="reveal" style="order: 1;">
+                <img src="assets/images/vision.jpg" alt="Teacher helping student"
+                    style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: TEAM -->
+    <section style="padding: 6rem 0;">
+        <div class="container text-center">
+            <h2 class="reveal" style="margin-bottom: 3rem;">Meet Our Leadership Team</h2>
+            <div class="grid about-team-grid" style="grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div class="card reveal" style="padding: 2rem;">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="CEO"
+                        style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem; border: 4px solid var(--primary-light);">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Sarah Jenkins</h3>
+                    <p style="color: var(--primary); font-weight: 600; margin-bottom: 1rem;">Founder & CEO</p>
+                    <p style="font-size: 0.875rem;">Former Ivy League professor with 15+ years of EdTech experience.</p>
+                </div>
+                <div class="card reveal" style="padding: 2rem;">
+                    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&q=80" alt="CTO"
+                        style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem; border: 4px solid var(--primary-light);">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">David Lee</h3>
+                    <p style="color: var(--primary); font-weight: 600; margin-bottom: 1rem;">Chief Technology Officer
+                    </p>
+                    <p style="font-size: 0.875rem;">Leading our platform's engineering and AI-driven matching
+                        algorithms.</p>
+                </div>
+                <div class="card reveal" style="padding: 2rem;">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80" alt="COO"
+                        style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem; border: 4px solid var(--primary-light);">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Emily Rivera</h3>
+                    <p style="color: var(--primary); font-weight: 600; margin-bottom: 1rem;">Head of Operations</p>
+                    <p style="font-size: 0.875rem;">Ensuring seamless experiences for thousands of tutors and students.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: FOOTER -->
+    <!-- FOOTER -->
+    <footer style="padding: 5rem 0 2rem; background: var(--bg-color); border-top: 1px solid var(--border-color);">
+        <div class="container footer-grid">
+            <!-- Col 1 -->
+            <div class="footer-col">
+                <a href="index.html"
+                    style="font-size: 1.75rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        style="width: 32px; height: 32px; color: var(--secondary);">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                    Tutor<span style="color: var(--text-primary)">Market</span>
+                </a>
+                <p>The premium destination for connecting K-12 students with world-class tutors.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg></a>
+                    <a href="#" class="social-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                            </path>
+                        </svg></a>
+                    <a href="#" class="social-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg></a>
+                </div>
+            </div>
+            <!-- Col 2 -->
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="tutors.html">Our Tutors</a></li>
+                    <li><a href="blog.html">Blog & News</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Col 3 -->
+            <div class="footer-col">
+                <h4>Subjects</h4>
+                <ul>
+                    <li><a href="subjects.html">Mathematics</a></li>
+                    <li><a href="subjects.html">Science</a></li>
+                    <li><a href="subjects.html">English Literature</a></li>
+                    <li><a href="subjects.html">Coding for Kids</a></li>
+                </ul>
+            </div>
+            <!-- Col 4 -->
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container"
+            style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+            <p style="margin: 0;">&copy; 2026 TutorMarket. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

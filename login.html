@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TutorMarket</title>
+    <meta name="description" content="Login to your account.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css" id="theme-style">
+    <link rel="stylesheet" href="assets/css/rtl.css" id="rtl-style" disabled>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <!-- Top Right Icons -->
+    <div style="position: absolute; top: 1.5rem; inset-inline-end: 1.5rem; z-index: 10; display: flex; align-items: center; gap: 16px;">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle Dark Mode"><i class="ph ph-moon"></i></button>
+        <button class="icon-btn" id="rtl-toggle" aria-label="Toggle RTL"><i
+                class="ph ph-arrows-left-right"></i></button>
+    </div>
+
+    <div
+        style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 5rem 1rem 2rem; background: var(--bg-primary);">
+        <div class="card reveal" style="width: 100%; max-width: 480px; padding: 2.5rem; box-shadow: var(--shadow-lg);">
+            <!-- Logo inside box -->
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <a href="index.html" class="logo" style="display: inline-flex; justify-content: center; width: 100%;">
+                    <i class="ph-fill ph-graduation-cap logo-icon"></i>
+                    ElevateLMS
+                </a>
+                <p style="color: var(--text-secondary);">Log in to your account.</p>
+            </div>
+
+            <form style="display: flex; flex-direction: column; gap: 1rem;">
+                <input type="email" placeholder="Email"
+                    style="width: 100%; padding: 0.875rem 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-primary); color: var(--text-primary); outline: none;">
+
+                <div style="position: relative;">
+                    <input type="password" id="login-password" placeholder="Password"
+                        style="width: 100%; padding: 0.875rem 2.5rem 0.875rem 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-primary); color: var(--text-primary); outline: none;">
+                    <button type="button" onclick="togglePassword('login-password', this)"
+                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: var(--text-secondary);">
+                        <svg class="eye-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                            stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </button>
+                </div>
+
+                <div
+                    style="display: flex; align-items: center; justify-content: space-between; font-size: 0.875rem; margin-top: 0.5rem;">
+                    <label
+                        style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; color: var(--text-secondary);">
+                        <input type="checkbox" style="width: 16px; height: 16px; accent-color: var(--primary);">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="hover-underline"
+                        style="color: var(--primary); text-decoration: none; font-weight: 500;">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary"
+                    style="width: 100%; padding: 0.875rem; margin-top: 0.5rem;">Login</button>
+            </form>
+
+            <div
+                style="display: flex; align-items: center; margin: 1.5rem 0; color: var(--text-secondary); font-size: 0.875rem;">
+                <div style="flex: 1; height: 1px; background: var(--border-color);"></div>
+                <span style="padding: 0 1rem;">Or log in with</span>
+                <div style="flex: 1; height: 1px; background: var(--border-color);"></div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <button class="btn btn-outline"
+                    style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem; background: var(--bg-card); color: var(--text-primary); border: 2px solid var(--border-color); border-radius: 8px; font-weight: 500;">
+                    <svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                            fill="#4285F4" />
+                        <path
+                            d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                            fill="#34A853" />
+                        <path
+                            d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                            fill="#FBBC05" />
+                        <path
+                            d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                            fill="#EA4335" />
+                    </svg>
+                    Google
+                </button>
+                <button class="btn btn-outline"
+                    style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem; background: var(--bg-card); color: var(--text-primary); border: 2px solid var(--border-color); border-radius: 8px; font-weight: 500;">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="#1877F2" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                    Facebook
+                </button>
+                <button class="btn btn-outline"
+                    style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.75rem; background: var(--bg-card); color: var(--text-primary); border: 2px solid var(--border-color); border-radius: 8px; font-weight: 500;">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.126 3.792 3.04 1.52-.087 2.096-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.647-.026 2.669-1.49 3.665-2.95 1.16-1.69 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.482-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.459 2.338-1.273 3.714 1.338.104 2.715-.688 3.56-1.702z" />
+                    </svg>
+                    Apple
+                </button>
+            </div>
+
+            <p style="text-align: center; margin-top: 2rem; font-size: 0.875rem; color: var(--text-secondary);">
+                Don't have an account? <a href="register.html" class="hover-underline"
+                    style="color: var(--primary); font-weight: 600; text-decoration: none;">Sign Up</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- JS for Eye Icon -->
+    <script>
+        function togglePassword(inputId, btn) {
+            const input = document.getElementById(inputId);
+            const icon = btn.querySelector('svg');
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.innerHTML = '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line>';
+            } else {
+                input.type = 'password';
+                icon.innerHTML = '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle>';
+            }
+        }
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

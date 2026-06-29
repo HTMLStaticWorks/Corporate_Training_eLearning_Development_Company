@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ElevateLMS</title>
+    <meta name="description"
+        content="World-class premium enterprise learning management system and corporate training solutions.">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css" id="theme-style">
+    <link rel="stylesheet" href="assets/css/rtl.css" id="rtl-style" disabled>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="ph-fill ph-graduation-cap logo-icon"></i>
+                ElevateLMS
+            </a>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-menu">
+                <!-- Desktop Dropdown -->
+                <div class="nav-item has-submenu desktop-only">
+                    <a href="#" class="nav-link nav-link-home" aria-expanded="false">Home <i
+                            class="ph ph-caret-down"></i></a>
+                    <div class="submenu">
+                        <a href="index.html" class="submenu-link">Home 1</a>
+                        <a href="home-2.html" class="submenu-link">Home 2</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Separate Links -->
+                <a href="index.html" class="nav-link mobile-only nav-link-home">Home 1</a>
+                <a href="home-2.html" class="nav-link mobile-only nav-link-home">Home 2</a>
+
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="solutions.html" class="nav-link">Solutions</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="industries.html" class="nav-link">Industries</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+
+                <!-- Mobile Actions (Inside Hamburger) -->
+                <div class="header-actions mobile-only-actions"
+                    style="margin-top: 1rem; width: 100%; justify-content: flex-start;">
+                    <button class="icon-btn" id="theme-toggle-mobile" aria-label="Toggle Dark Mode"><i
+                            class="ph ph-moon"></i></button>
+                    <a href="dashboard.html" class="icon-btn" aria-label="Dashboard"><i
+                            class="ph ph-squares-four"></i></a>
+                    <button class="icon-btn" id="rtl-toggle-mobile" aria-label="Toggle RTL"><i
+                            class="ph ph-arrows-left-right"></i></button>
+                    <a href="register.html" class="btn btn-primary" style="margin-left: auto;">Sign Up</a>
+                </div>
+            </nav>
+
+            <!-- Desktop Actions -->
+            <div class="header-actions desktop-actions">
+                <button class="icon-btn" id="theme-toggle" aria-label="Toggle Dark Mode"><i
+                        class="ph ph-moon"></i></button>
+                <a href="dashboard.html" class="icon-btn" aria-label="Dashboard"><i class="ph ph-squares-four"></i></a>
+                <button class="icon-btn" id="rtl-toggle" aria-label="Toggle RTL"><i
+                        class="ph ph-arrows-left-right"></i></button>
+                <a href="register.html" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Hero Section -->
+    <section class="section" style="padding-top: 160px; position: relative; overflow: hidden;">
+        <!-- Background Elements -->
+        <div
+            style="position: absolute; top: -10%; left: -10%; width: 500px; height: 500px; background: var(--color-primary); filter: blur(150px); opacity: 0.15; border-radius: 50%;">
+        </div>
+        <div
+            style="position: absolute; bottom: 0; right: -5%; width: 600px; height: 600px; background: var(--color-secondary); filter: blur(150px); opacity: 0.1; border-radius: 50%;">
+        </div>
+
+        <div class="container">
+            <div class="d-flex flex-column align-center text-center"
+                style="max-width: 900px; margin: 0 auto; gap: var(--spacing-lg);">
+                <div class="badge badge-primary" style="margin-bottom: var(--spacing-sm);">Our Story</div>
+
+                <h1>About Us</h1>
+
+                <p style="font-size: 18px; max-width: 700px; margin: 0 auto;">
+                    Learn more about our mission and the team.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Origins -->
+    <section class="section" style="background-color: var(--bg-primary);">
+        <div class="container">
+            <div class="d-flex gap-xl align-center flex-column-mobile">
+                <div class="reveal" style="flex: 1;">
+                    <div class="badge badge-primary" style="margin-bottom: 16px;">Our Origins</div>
+                    <h2 style="font-size: 40px; margin-bottom: 24px;">How We Started</h2>
+                    <p style="color: var(--text-secondary); font-size: 18px; line-height: 1.7; margin-bottom: 24px;">
+                        Founded in 2026, ElevateLMS began with a simple belief: every student deserves access to
+                        world-class education, regardless of their location.
+                    </p>
+                    <p style="color: var(--text-secondary); font-size: 18px; line-height: 1.7;">
+                        We saw a gap between passionate educators and eager students. By building a secure, intuitive,
+                        and feature-rich platform, we bridged that gap to create a thriving global learning community.
+                    </p>
+                </div>
+                <div class="reveal" style="flex: 1; position: relative;">
+                    <div class="glass-panel" style="padding: 16px; border-radius: 32px;">
+                        <img src="assets/images/about.png" alt="Students studying together"
+                            style="width: 100%; border-radius: 24px; box-shadow: var(--card-shadow); display: block;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Mission -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="d-flex gap-xl align-center flex-column-mobile">
+                <div class="reveal" style="flex: 1;">
+                    <div class="badge badge-success" style="margin-bottom: 16px;">Our Mission</div>
+                    <h2 style="font-size: 40px; margin-bottom: 24px;">Empowering Modern Workforces</h2>
+                    <p style="color: var(--text-secondary); font-size: 18px; line-height: 1.7; margin-bottom: 32px;">
+                        At ElevateLMS, we believe that continuous learning is the key to corporate success. We were
+                        founded with the goal of making enterprise training accessible, trackable, and engaging.
+                    </p>
+                    <div class="card"
+                        style="display: flex; gap: 24px; align-items: center; padding: 24px; background: var(--bg-primary); border-left: 4px solid var(--color-accent);">
+                        <div
+                            style="width: 56px; height: 56px; border-radius: 50%; background: rgba(34,197,94,0.1); color: var(--color-accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="ph-fill ph-rocket-launch" style="font-size: 28px;"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin: 0 0 4px 0; font-size: 20px;">Continuous Growth</h4>
+                            <p style="margin: 0; font-size: 16px; color: var(--text-secondary);">Bridging the gap
+                                between potential and performance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal" style="flex: 1; position: relative;">
+                    <div class="glass-panel" style="padding: 16px; border-radius: 32px;">
+                        <img src="assets/images/mission.png" alt="Mission"
+                            style="width: 100%; border-radius: 24px; box-shadow: var(--card-shadow); display: block; object-fit: cover; min-height: 300px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision -->
+    <section class="section" style="background-color: var(--bg-primary);">
+        <div class="container">
+            <!-- Removed flex-row-reverse so image is on the right -->
+            <div class="d-flex gap-xl align-center flex-column-mobile">
+                <div class="reveal" style="flex: 1;">
+                    <div class="badge badge-primary" style="margin-bottom: 16px;">Our Vision</div>
+                    <h2 style="font-size: 40px; margin-bottom: 24px;">A Global Culture of Learning</h2>
+                    <p style="color: var(--text-secondary); font-size: 18px; line-height: 1.7; margin-bottom: 32px;">
+                        We envision a world where every employee, regardless of their geographical location or job
+                        title, has instant access to world-class educational resources.
+                    </p>
+                    <div class="card"
+                        style="display: flex; gap: 24px; align-items: center; padding: 24px; background: var(--bg-secondary); border-left: 4px solid var(--color-primary);">
+                        <div
+                            style="width: 56px; height: 56px; border-radius: 50%; background: rgba(37,99,235,0.1); color: var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="ph-fill ph-globe-hemisphere-west" style="font-size: 28px;"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin: 0 0 4px 0; font-size: 20px;">AI & Analytics</h4>
+                            <p style="margin: 0; font-size: 16px; color: var(--text-secondary);">Delivering personalized
+                                learning paths seamlessly.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal" style="flex: 1; position: relative;">
+                    <div class="glass-panel" style="padding: 16px; border-radius: 32px;">
+                        <img src="assets/images/vision.png" alt="Vision"
+                            style="width: 100%; border-radius: 24px; box-shadow: var(--card-shadow); display: block; object-fit: cover; min-height: 300px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Team -->
+    <section class="section" style="background-color: var(--bg-primary);">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: var(--spacing-xl);">
+                <h2 style="font-size: 40px;">Meet Our Leadership Team</h2>
+            </div>
+            <div class="d-flex gap-lg flex-column-mobile" style="flex-wrap: wrap; justify-content: center;">
+                <div class="card reveal"
+                    style="flex: 1 1 calc(33.333% - 24px); min-width: 250px; text-align: center; padding: 40px 24px;">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="CEO"
+                        style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin: 0 auto 24px; border: 4px solid var(--bg-secondary); box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 24px; margin-bottom: 8px;">Sarah Jenkins</h3>
+                    <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 16px;">Founder & CEO</p>
+                    <p style="font-size: 16px; color: var(--text-secondary);">Former Ivy League professor with 15+ years
+                        of EdTech experience.</p>
+                </div>
+                <div class="card reveal"
+                    style="flex: 1 1 calc(33.333% - 24px); min-width: 250px; text-align: center; padding: 40px 24px;">
+                    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&q=80" alt="CTO"
+                        style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin: 0 auto 24px; border: 4px solid var(--bg-secondary); box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 24px; margin-bottom: 8px;">David Lee</h3>
+                    <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 16px;">Chief Technology
+                        Officer</p>
+                    <p style="font-size: 16px; color: var(--text-secondary);">Leading our platform's engineering and
+                        AI-driven matching algorithms.</p>
+                </div>
+                <div class="card reveal"
+                    style="flex: 1 1 calc(33.333% - 24px); min-width: 250px; text-align: center; padding: 40px 24px;">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80" alt="COO"
+                        style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin: 0 auto 24px; border: 4px solid var(--bg-secondary); box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                    <h3 style="font-size: 24px; margin-bottom: 8px;">Emily Rivera</h3>
+                    <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 16px;">Head of Operations
+                    </p>
+                    <p style="font-size: 16px; color: var(--text-secondary);">Ensuring seamless experiences for
+                        thousands of tutors and students.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: var(--spacing-md);">
+                        <i class="ph-fill ph-graduation-cap logo-icon"></i>
+                        ElevateLMS
+                    </a>
+                    <p style="max-width: 300px;">
+                        World-class enterprise eLearning solutions and corporate training platform designed for modern
+                        organizations.
+                    </p>
+                    <div class="social-links d-flex gap-sm" style="margin-top: var(--spacing-md);">
+                        <a href="#" class="icon-btn" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#" class="icon-btn" aria-label="Twitter"><i class="ph-fill ph-twitter-logo"></i></a>
+                        <a href="#" class="icon-btn" aria-label="LinkedIn"><i class="ph-fill ph-linkedin-logo"></i></a>
+                        <a href="#" class="icon-btn" aria-label="Instagram"><i
+                                class="ph-fill ph-instagram-logo"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <div class="footer-links">
+                        <a href="solutions.html">Solutions</a>
+                        <a href="dashboard.html">Dashboard</a>
+                        <a href="analytics.html">Analytics</a>
+                        <a href="pricing.html">Pricing</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <div class="footer-links">
+                        <a href="courses.html">Course Catalog</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Help Center</a>
+                        <a href="contact.html">Contact Sales</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Security</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="margin: 0;">&copy; 2026 ElevateLMS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

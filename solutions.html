@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Solutions - ElevateLMS</title>
+    <meta name="description"
+        content="World-class premium enterprise learning management system and corporate training solutions.">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css" id="theme-style">
+    <link rel="stylesheet" href="assets/css/rtl.css" id="rtl-style" disabled>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="ph-fill ph-graduation-cap logo-icon"></i>
+                ElevateLMS
+            </a>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-menu">
+                <!-- Desktop Dropdown -->
+                <div class="nav-item has-submenu desktop-only">
+                    <a href="#" class="nav-link nav-link-home" aria-expanded="false">Home <i
+                            class="ph ph-caret-down"></i></a>
+                    <div class="submenu">
+                        <a href="index.html" class="submenu-link">Home 1</a>
+                        <a href="home-2.html" class="submenu-link">Home 2</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Separate Links -->
+                <a href="index.html" class="nav-link mobile-only nav-link-home">Home 1</a>
+                <a href="home-2.html" class="nav-link mobile-only nav-link-home">Home 2</a>
+
+                <a href="about.html" class="nav-link">About</a>
+                <a href="solutions.html" class="nav-link active">Solutions</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="industries.html" class="nav-link">Industries</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+
+                <!-- Mobile Actions (Inside Hamburger) -->
+                <div class="header-actions mobile-only-actions"
+                    style="margin-top: 1rem; width: 100%; justify-content: flex-start;">
+                    <button class="icon-btn" id="theme-toggle-mobile" aria-label="Toggle Dark Mode"><i
+                            class="ph ph-moon"></i></button>
+                    <a href="dashboard.html" class="icon-btn" aria-label="Dashboard"><i
+                            class="ph ph-squares-four"></i></a>
+                    <button class="icon-btn" id="rtl-toggle-mobile" aria-label="Toggle RTL"><i
+                            class="ph ph-arrows-left-right"></i></button>
+                    <a href="register.html" class="btn btn-primary" style="margin-left: auto;">Sign Up</a>
+                </div>
+            </nav>
+
+            <!-- Desktop Actions -->
+            <div class="header-actions desktop-actions">
+                <button class="icon-btn" id="theme-toggle" aria-label="Toggle Dark Mode"><i
+                        class="ph ph-moon"></i></button>
+                <a href="dashboard.html" class="icon-btn" aria-label="Dashboard"><i class="ph ph-squares-four"></i></a>
+                <button class="icon-btn" id="rtl-toggle" aria-label="Toggle RTL"><i
+                        class="ph ph-arrows-left-right"></i></button>
+                <a href="register.html" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+
+    
+    <!-- Hero Section -->
+    <section class="section" style="padding-top: 160px; position: relative; overflow: hidden;">
+        <!-- Background Elements -->
+        <div
+            style="position: absolute; top: -10%; left: -10%; width: 500px; height: 500px; background: var(--color-primary); filter: blur(150px); opacity: 0.15; border-radius: 50%;">
+        </div>
+        <div
+            style="position: absolute; bottom: 0; right: -5%; width: 600px; height: 600px; background: var(--color-secondary); filter: blur(150px); opacity: 0.1; border-radius: 50%;">
+        </div>
+
+        <div class="container">
+            <div class="d-flex flex-column align-center text-center"
+                style="max-width: 900px; margin: 0 auto; gap: var(--spacing-lg);">
+                <div class="badge badge-primary" style="margin-bottom: var(--spacing-sm);">Solutions</div>
+
+                <h1>Our Solutions</h1>
+
+                <p style="font-size: 18px; max-width: 700px; margin: 0 auto;">
+                    Discover how we make online learning easier and more effective for everyone.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution 1: HR Teams -->
+    <section class="section">
+        <div class="container">
+            <div class="d-flex gap-xxl align-center flex-column-mobile">
+                <div class="reveal" style="flex: 1; position: relative;">
+                    <div class="glass-panel" style="padding: 16px; border-radius: 32px;">
+                        <img src="assets/images/solution1.png" alt="HR Teams" style="width: 100%; border-radius: 24px; box-shadow: var(--card-shadow); display: block; object-fit: cover; min-height: 300px;">
+                    </div>
+                </div>
+                <div class="reveal" style="flex: 1;">
+                    <div class="badge badge-success" style="margin-bottom: 16px;">For HR Teams</div>
+                    <h2 style="font-size: 36px; margin-bottom: 24px;">Streamline Employee Onboarding</h2>
+                    <p style="color: var(--text-secondary); font-size: 18px; line-height: 1.6; margin-bottom: 24px;">
+                        Reduce time-to-productivity with structured, automated onboarding pathways that ensure every new hire receives consistent training and information.
+                    </p>
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px;">
+                        <li style="display: flex; align-items: flex-start; gap: 16px;">
+                            <i class="ph-fill ph-check-circle" style="color: var(--color-accent); font-size: 24px; margin-top: 2px;"></i> 
+                            <div>
+                                <h4 style="margin: 0 0 4px 0; font-size: 18px;">Automated Workflows</h4>
+                                <span style="color: var(--text-secondary);">Set it and forget it onboarding schedules.</span>
+                            </div>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 16px;">
+                            <i class="ph-fill ph-check-circle" style="color: var(--color-accent); font-size: 24px; margin-top: 2px;"></i> 
+                            <div>
+                                <h4 style="margin: 0 0 4px 0; font-size: 18px;">Consistent Messaging</h4>
+                                <span style="color: var(--text-secondary);">Ensure 100% policy and culture alignment.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution 2: Operations -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="d-flex gap-xxl align-center flex-column-mobile flex-row-reverse">
+                <div class="reveal" style="flex: 1; position: relative;">
+                    <div class="glass-panel" style="padding: 16px; border-radius: 32px;">
+                        <img src="assets/images/solution2.png" alt="Operations" style="width: 100%; border-radius: 24px; box-shadow: var(--card-shadow); display: block; object-fit: cover; min-height: 300px;">
+                    </div>
+                </div>
+                <div class="reveal" style="flex: 1;">
+                    <div class="badge badge-primary" style="margin-bottom: 16px;">For Operations</div>
+                    <h2 style="font-size: 36px; margin-bottom: 24px;">Ensure Compliance & Certification</h2>
+                    <p style="color: var(--text-secondary); font-size: 18px; line-height: 1.6; margin-bottom: 24px;">
+                        Automate mandatory training assignments, track completion rates, and generate audit-ready reports to keep your organization compliant with industry regulations.
+                    </p>
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px;">
+                        <li style="display: flex; align-items: flex-start; gap: 16px;">
+                            <i class="ph-fill ph-check-circle" style="color: var(--color-primary); font-size: 24px; margin-top: 2px;"></i> 
+                            <div>
+                                <h4 style="margin: 0 0 4px 0; font-size: 18px;">Audit-Ready Reporting</h4>
+                                <span style="color: var(--text-secondary);">Export detailed compliance logs instantly.</span>
+                            </div>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 16px;">
+                            <i class="ph-fill ph-check-circle" style="color: var(--color-primary); font-size: 24px; margin-top: 2px;"></i> 
+                            <div>
+                                <h4 style="margin: 0 0 4px 0; font-size: 18px;">Certification Tracking</h4>
+                                <span style="color: var(--text-secondary);">Automated reminders for expiring certificates.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution 3: Sales Teams -->
+    <section class="section">
+        <div class="container">
+            <div class="d-flex gap-xxl align-center flex-column-mobile">
+                <div class="reveal" style="flex: 1; position: relative;">
+                    <div class="glass-panel" style="padding: 16px; border-radius: 32px;">
+                        <img src="assets/images/solution3.png" alt="Sales Teams" style="width: 100%; border-radius: 24px; box-shadow: var(--card-shadow); display: block; object-fit: cover; min-height: 300px;">
+                    </div>
+                </div>
+                <div class="reveal" style="flex: 1;">
+                    <div class="badge badge-success" style="margin-bottom: 16px; background: rgba(6,182,212,0.1); color: var(--color-secondary); border-color: rgba(6,182,212,0.2);">For Sales Teams</div>
+                    <h2 style="font-size: 36px; margin-bottom: 24px;">Accelerate Sales Enablement</h2>
+                    <p style="color: var(--text-secondary); font-size: 18px; line-height: 1.6; margin-bottom: 24px;">
+                        Equip your salesforce with the latest product knowledge, competitive analysis, and negotiation techniques directly at the point of need.
+                    </p>
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px;">
+                        <li style="display: flex; align-items: flex-start; gap: 16px;">
+                            <i class="ph-fill ph-check-circle" style="color: var(--color-secondary); font-size: 24px; margin-top: 2px;"></i> 
+                            <div>
+                                <h4 style="margin: 0 0 4px 0; font-size: 18px;">Microlearning Modules</h4>
+                                <span style="color: var(--text-secondary);">Bite-sized content for reps on the go.</span>
+                            </div>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 16px;">
+                            <i class="ph-fill ph-check-circle" style="color: var(--color-secondary); font-size: 24px; margin-top: 2px;"></i> 
+                            <div>
+                                <h4 style="margin: 0 0 4px 0; font-size: 18px;">Product Rollouts</h4>
+                                <span style="color: var(--text-secondary);">Instantly train teams on new features.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution 4: Leadership -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="d-flex gap-xxl align-center flex-column-mobile flex-row-reverse">
+                <div class="reveal" style="flex: 1; position: relative;">
+                    <div class="glass-panel" style="padding: 16px; border-radius: 32px;">
+                        <img src="assets/images/solution4.png" alt="Leadership" style="width: 100%; border-radius: 24px; box-shadow: var(--card-shadow); display: block; object-fit: cover; min-height: 300px;">
+                    </div>
+                </div>
+                <div class="reveal" style="flex: 1;">
+                    <div class="badge badge-primary" style="margin-bottom: 16px; background: rgba(37,99,235,0.1); color: var(--color-primary); border-color: rgba(37,99,235,0.2);">For Leadership</div>
+                    <h2 style="font-size: 36px; margin-bottom: 24px;">Data-Driven Talent Insights</h2>
+                    <p style="color: var(--text-secondary); font-size: 18px; line-height: 1.6; margin-bottom: 24px;">
+                        Leverage comprehensive analytics dashboards to identify skill gaps, measure ROI on training initiatives, and discover future leaders within your organization.
+                    </p>
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px;">
+                        <li style="display: flex; align-items: flex-start; gap: 16px;">
+                            <i class="ph-fill ph-check-circle" style="color: var(--color-primary); font-size: 24px; margin-top: 2px;"></i> 
+                            <div>
+                                <h4 style="margin: 0 0 4px 0; font-size: 18px;">Skill Gap Analysis</h4>
+                                <span style="color: var(--text-secondary);">Proactively upskill your workforce.</span>
+                            </div>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 16px;">
+                            <i class="ph-fill ph-check-circle" style="color: var(--color-primary); font-size: 24px; margin-top: 2px;"></i> 
+                            <div>
+                                <h4 style="margin: 0 0 4px 0; font-size: 18px;">ROI Measurement</h4>
+                                <span style="color: var(--text-secondary);">Directly correlate learning with business outcomes.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: var(--spacing-md);">
+                        <i class="ph-fill ph-graduation-cap logo-icon"></i>
+                        ElevateLMS
+                    </a>
+                    <p style="max-width: 300px;">
+                        World-class enterprise eLearning solutions and corporate training platform designed for modern
+                        organizations.
+                    </p>
+                    <div class="social-links d-flex gap-sm" style="margin-top: var(--spacing-md);">
+                        <a href="#" class="icon-btn" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#" class="icon-btn" aria-label="Twitter"><i class="ph-fill ph-twitter-logo"></i></a>
+                        <a href="#" class="icon-btn" aria-label="LinkedIn"><i class="ph-fill ph-linkedin-logo"></i></a>
+                        <a href="#" class="icon-btn" aria-label="Instagram"><i
+                                class="ph-fill ph-instagram-logo"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <div class="footer-links">
+                        <a href="solutions.html">Solutions</a>
+                        <a href="dashboard.html">Dashboard</a>
+                        <a href="analytics.html">Analytics</a>
+                        <a href="pricing.html">Pricing</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <div class="footer-links">
+                        <a href="courses.html">Course Catalog</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Help Center</a>
+                        <a href="contact.html">Contact Sales</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Security</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="margin: 0;">&copy; 2026 ElevateLMS. All rights reserved.</p>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

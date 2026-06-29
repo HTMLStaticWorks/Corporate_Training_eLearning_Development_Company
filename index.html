@@ -1,1 +1,353 @@
-test
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElevateLMS - Corporate Training & eLearning Development</title>
+    <meta name="description"
+        content="ElevateLMS delivers enterprise learning, analytics, and workforce training solutions for modern organizations.">
+    <meta name="keywords" content="LMS, corporate training, eLearning, workforce development, employee training">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="ElevateLMS">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css" id="theme-style">
+    <link rel="stylesheet" href="assets/css/rtl.css" id="rtl-style" disabled>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="ph-fill ph-graduation-cap logo-icon"></i>
+                ElevateLMS
+            </a>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-menu">
+                <!-- Desktop Dropdown -->
+                <div class="nav-item has-submenu desktop-only">
+                    <a href="#" class="nav-link nav-link-home active" aria-expanded="false">Home <i
+                            class="ph ph-caret-down"></i></a>
+                    <div class="submenu">
+                        <a href="index.html" class="submenu-link active">Home 1</a>
+                        <a href="home-2.html" class="submenu-link">Home 2</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Separate Links -->
+                <a href="index.html" class="nav-link mobile-only nav-link-home active">Home 1</a>
+                <a href="home-2.html" class="nav-link mobile-only nav-link-home">Home 2</a>
+
+                <a href="about.html" class="nav-link">About</a>
+                <a href="solutions.html" class="nav-link">Solutions</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="industries.html" class="nav-link">Industries</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+
+                <!-- Mobile Actions (Inside Hamburger) -->
+                <div class="header-actions mobile-only-actions"
+                    style="margin-top: 1rem; width: 100%; justify-content: flex-start;">
+                    <button class="icon-btn" id="theme-toggle-mobile" aria-label="Toggle Dark Mode"><i
+                            class="ph ph-moon"></i></button>
+                    <a href="dashboard.html" class="icon-btn" aria-label="Dashboard"><i
+                            class="ph ph-squares-four"></i></a>
+                    <button class="icon-btn" id="rtl-toggle-mobile" aria-label="Toggle RTL"><i
+                            class="ph ph-arrows-left-right"></i></button>
+                    <a href="register.html" class="btn btn-primary" style="margin-left: auto;">Sign Up</a>
+                </div>
+            </nav>
+
+            <!-- Desktop Actions -->
+            <div class="header-actions desktop-actions">
+                <button class="icon-btn" id="theme-toggle" aria-label="Toggle Dark Mode"><i
+                        class="ph ph-moon"></i></button>
+                <a href="dashboard.html" class="icon-btn" aria-label="Dashboard"><i class="ph ph-squares-four"></i></a>
+                <button class="icon-btn" id="rtl-toggle" aria-label="Toggle RTL"><i
+                        class="ph ph-arrows-left-right"></i></button>
+                <a href="register.html" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section" style="padding-top: 160px; position: relative; overflow: hidden;">
+        <!-- Background Elements -->
+        <div
+            style="position: absolute; top: -10%; left: -10%; width: 500px; height: 500px; background: var(--color-primary); filter: blur(150px); opacity: 0.15; border-radius: 50%;">
+        </div>
+        <div
+            style="position: absolute; bottom: 0; right: -5%; width: 600px; height: 600px; background: var(--color-secondary); filter: blur(150px); opacity: 0.1; border-radius: 50%;">
+        </div>
+
+        <div class="container">
+            <div class="d-flex flex-column align-center text-center"
+                style="max-width: 900px; margin: 0 auto; gap: var(--spacing-lg);">
+                <div class="badge badge-primary" style="margin-bottom: var(--spacing-sm);">
+                    Transform Workforce Learning Into Measurable Business Performance
+                </div>
+
+                <h1>Build Smarter Teams With Enterprise eLearning Solutions</h1>
+
+                <p style="font-size: 18px; max-width: 700px; margin: 0 auto;">
+                    Deliver SCORM-compliant training, track employee progress in real time, automate compliance
+                    reporting, and launch branded learning experiences tailored to your organization.
+                </p>
+
+                <div class="d-flex gap-md justify-center" style="margin-top: var(--spacing-md);">
+                    <a href="solutions.html" class="btn btn-secondary">
+                        Explore Solutions
+                    </a>
+                </div>
+
+                <!-- Hero Dashboard Mockup -->
+                <div class="glass-panel"
+                    style="margin-top: var(--spacing-xl); padding: var(--spacing-sm); width: 100%; position: relative; z-index: 10;">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+                        alt="Enterprise Dashboard Mockup"
+                        style="border-radius: var(--radius-md); width: 100%; border: 1px solid var(--border-color);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By / Features Section -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: var(--spacing-xl);">
+                <h3
+                    style="color: var(--text-secondary); font-size: 16px; text-transform: uppercase; letter-spacing: 1px;">
+                    Trusted by Global Enterprises</h3>
+                <!-- Logos would go here, using placeholders for now -->
+                <div class="d-flex justify-center align-center gap-xl"
+                    style="margin-top: var(--spacing-lg); opacity: 0.6; flex-wrap: wrap;">
+                    <h4 style="margin:0;">ACME Corp</h4>
+                    <h4 style="margin:0;">Globex</h4>
+                    <h4 style="margin:0;">Soylent</h4>
+                    <h4 style="margin:0;">Initech</h4>
+                    <h4 style="margin:0;">Umbrella</h4>
+                </div>
+            </div>
+
+            <div class="d-flex gap-lg" style="margin-top: var(--spacing-xxl);">
+                <div class="card" style="flex: 1; height: 100%; display: flex; flex-direction: column;">
+                    <div class="icon-btn"
+                        style="background: rgba(37,99,235,0.1); border-color: transparent; color: var(--color-primary); margin-bottom: var(--spacing-md);">
+                        <i class="ph ph-chart-line-up"></i>
+                    </div>
+                    <h4>Learning Analytics</h4>
+                    <p style="flex: 1;">Actionable insights to track performance, completion rates, and learning ROI
+                        across your entire
+                        organization.</p>
+                </div>
+                <div class="card" style="flex: 1; height: 100%; display: flex; flex-direction: column;">
+                    <div class="icon-btn"
+                        style="background: rgba(6,182,212,0.1); border-color: transparent; color: var(--color-secondary); margin-bottom: var(--spacing-md);">
+                        <i class="ph ph-plugs"></i>
+                    </div>
+                    <h4>SCORM Compatibility</h4>
+                    <p style="flex: 1;">Import and manage industry-standard SCORM courses seamlessly into your
+                        centralized learning
+                        environment.</p>
+                </div>
+                <div class="card" style="flex: 1; height: 100%; display: flex; flex-direction: column;">
+                    <div class="icon-btn"
+                        style="background: rgba(34,197,94,0.1); border-color: transparent; color: var(--color-accent); margin-bottom: var(--spacing-md);">
+                        <i class="ph ph-shield-check"></i>
+                    </div>
+                    <h4>Compliance Training</h4>
+                    <p style="flex: 1;">Automate compliance workflows, mandatory training assignments, and certification
+                        tracking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="d-flex gap-lg justify-between flex-column-mobile" style="align-items: center;">
+                <div style="flex: 1; max-width: 540px;">
+                    <div class="badge badge-primary">Measure impact in real time</div>
+                    <h3>Turn learning data into confident business decisions</h3>
+                    <p>Monitor completion trends, skill growth, and certification health from one executive-ready
+                        dashboard.</p>
+                </div>
+                <div class="card" style="flex: 1;">
+                    <div class="d-flex flex-column gap-sm">
+                        <div class="d-flex align-center gap-sm"><i class="ph-fill ph-check-circle"
+                                style="color: var(--color-accent); font-size: 20px;"></i><span>Live learner progress
+                                tracking</span></div>
+                        <div class="d-flex align-center gap-sm"><i class="ph-fill ph-check-circle"
+                                style="color: var(--color-accent); font-size: 20px;"></i><span>Automated compliance
+                                reporting</span></div>
+                        <div class="d-flex align-center gap-sm"><i class="ph-fill ph-check-circle"
+                                style="color: var(--color-accent); font-size: 20px;"></i><span>Role-based team
+                                analytics</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="text-center" style="max-width: 760px; margin: 0 auto;">
+                <div class="badge badge-success">Fast implementation</div>
+                <h3>Launch a beautifully branded experience without heavy lift</h3>
+                <p>From onboarding to leadership enablement, ElevateLMS helps teams deliver polished learning journeys
+                    quickly and at scale.</p>
+            </div>
+            <div class="d-flex gap-lg" style="margin-top: var(--spacing-xl); flex-wrap: wrap;">
+                <div class="card" style="flex: 1; min-width: 240px;">
+                    <img src="assets/images/img1.png"
+                        style="width: 100%; height: auto; border-radius: var(--radius-sm); margin-bottom: 1rem;"
+                        alt="Onboarding">
+                    <h4>Structured onboarding</h4>
+                    <p>Guide new hires through each milestone with clear, trackable learning paths.</p>
+                </div>
+                <div class="card" style="flex: 1; min-width: 240px;">
+                    <img src="assets/images/img2.png"
+                        style="width: 100%; height: auto; border-radius: var(--radius-sm); margin-bottom: 1rem;"
+                        alt="Content Delivery">
+                    <h4>Scalable content delivery</h4>
+                    <p>Support blended learning with video, SCORM, certification, and assessments together.</p>
+                </div>
+                <div class="card" style="flex: 1; min-width: 240px;">
+                    <img src="assets/images/img3.png"
+                        style="width: 100%; height: auto; border-radius: var(--radius-sm); margin-bottom: 1rem;"
+                        alt="Executive Visibility">
+                    <h4>Executive visibility</h4>
+                    <p>Give leaders a simple view of team adoption, quality, and outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="max-width: 720px; margin: 0 auto; margin-bottom: var(--spacing-xl);">
+                <div class="badge badge-primary">Customer stories</div>
+                <h3>Teams use ElevateLMS to build stronger workforce capability</h3>
+            </div>
+            <div class="d-flex gap-lg" style="flex-wrap: wrap;">
+                <div class="card" style="flex: 1; min-width: 260px;">
+                    <div class="d-flex gap-xs" style="color: #F59E0B; margin-bottom: 1rem;">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p>“The analytics helped us prove training ROI to leadership within the first quarter.”</p>
+                    <div class="d-flex align-center gap-md" style="margin-top: 16px;">
+                        <img src="https://i.pravatar.cc/150?u=mina"
+                            style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;" alt="Mina Patel">
+                        <div>
+                            <h5 style="margin: 0;">Mina Patel</h5>
+                            <span style="color: var(--text-secondary); font-size: 14px;">Head of Enablement,
+                                Northstar</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="flex: 1; min-width: 260px;">
+                    <div class="d-flex gap-xs" style="color: #F59E0B; margin-bottom: 1rem;">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p>“Our compliance training now feels modern, simple, and far easier to manage.”</p>
+                    <div class="d-flex align-center gap-md" style="margin-top: 16px;">
+                        <img src="https://i.pravatar.cc/150?u=jalen"
+                            style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;"
+                            alt="Jalen Brooks">
+                        <div>
+                            <h5 style="margin: 0;">Jalen Brooks</h5>
+                            <span style="color: var(--text-secondary); font-size: 14px;">Operations Lead,
+                                Meridian</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="card" style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <div class="badge badge-success">Ready to grow?</div>
+                <h3>Build a modern learning experience that scales with your team</h3>
+                <p>Start your free pilot and see how ElevateLMS helps you train faster and learn smarter.</p>
+                <div class="d-flex gap-md justify-center" style="margin-top: 20px; flex-wrap: wrap;">
+                    <a href="register.html" class="btn btn-primary">Create Account</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: var(--spacing-md);">
+                        <i class="ph-fill ph-graduation-cap logo-icon"></i>
+                        ElevateLMS
+                    </a>
+                    <p style="max-width: 300px;">
+                        World-class enterprise eLearning solutions and corporate training platform designed for modern
+                        organizations.
+                    </p>
+                    <div class="social-links d-flex gap-sm" style="margin-top: var(--spacing-md);">
+                        <a href="#" class="icon-btn" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#" class="icon-btn" aria-label="Twitter"><i class="ph-fill ph-twitter-logo"></i></a>
+                        <a href="#" class="icon-btn" aria-label="LinkedIn"><i class="ph-fill ph-linkedin-logo"></i></a>
+                        <a href="#" class="icon-btn" aria-label="Instagram"><i
+                                class="ph-fill ph-instagram-logo"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <div class="footer-links">
+                        <a href="solutions.html">Solutions</a>
+                        <a href="dashboard.html">Dashboard</a>
+                        <a href="analytics.html">Analytics</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <div class="footer-links">
+                        <a href="courses.html">Course Catalog</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Help Center</a>
+                        <a href="contact.html">Contact Sales</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Security</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="margin: 0;">&copy; 2026 ElevateLMS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
