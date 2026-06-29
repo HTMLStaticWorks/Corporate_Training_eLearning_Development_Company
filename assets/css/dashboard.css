@@ -1,0 +1,228 @@
+/* Dashboard Layout Styles */
+.dashboard-body {
+    background: var(--bg-primary);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard-mobile-header {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+.dashboard-layout {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.dashboard-sidebar {
+    width: 280px;
+    background: var(--bg-card);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    z-index: 100;
+}
+
+.sidebar-header {
+    padding: 2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-nav {
+    padding: 1.5rem 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow-y: auto;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.875rem 1.25rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    transition: var(--transition-normal);
+}
+
+.sidebar-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar-link:hover, .sidebar-link.active {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.sidebar-footer {
+    padding: 1.5rem 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Main Content */
+.dashboard-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-primary);
+    overflow-y: auto;
+}
+
+.dashboard-content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.tab-pane {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tab-pane.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dashboard Top Navigation (Desktop) */
+.dashboard-top-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    gap: 1rem;
+}
+
+.user-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    padding-left: 1rem;
+    border-left: 1px solid var(--border-color);
+}
+
+.user-profile-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Mobile Sidebar Profile */
+.sidebar-profile-mobile {
+    display: none;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem 1rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+}
+
+.sidebar-profile-mobile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Hide toggles in sidebar on desktop */
+.sidebar-toggles-mobile {
+    display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .dashboard-mobile-header {
+        display: flex;
+    }
+    
+    .dashboard-layout {
+        padding-top: 73px; /* height of mobile header */
+    }
+
+    .dashboard-sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: auto;
+        height: 100vh;
+        transform: translateX(100%);
+    }
+
+    .dashboard-sidebar.active {
+        transform: translateX(0);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .sidebar-header #closeSidebarBtn {
+        display: flex !important;
+    }
+
+    .dashboard-top-nav {
+        display: none !important;
+    }
+    
+    .sidebar-profile-mobile {
+        display: flex !important;
+    }
+
+    .sidebar-toggles-mobile {
+        display: flex !important;
+    }
+
+    .sidebar-logo {
+        display: none !important;
+    }
+
+    .sidebar-nav {
+        overflow-y: visible !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .dashboard-mobile-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .upcoming-lesson-row, .assignment-row {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 1rem;
+    }
+
+    .message-row {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .message-row p {
+        white-space: normal !important;
+    }
+}
