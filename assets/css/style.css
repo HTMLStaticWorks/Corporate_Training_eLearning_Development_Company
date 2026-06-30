@@ -220,7 +220,7 @@ img {
   border: 1px solid var(--border-color);
   box-shadow: var(--card-shadow);
   transition: all var(--transition-normal);
-  height: 100%;
+  display: flex; flex-direction: column;
 }
 
 .card:hover {
@@ -533,7 +533,7 @@ body.light-theme .submenu-link.active {
   }
 
   .mobile-only-actions {
-    justify-content: center !important;
+    justify-content: flex-start !important;
   }
   .mobile-only-actions .btn {
     margin-left: 0 !important;
@@ -605,17 +605,18 @@ body.light-theme .submenu-link.active {
         text-align: center !important;
     }
     .nav-link, .mobile-only.nav-link {
-        justify-content: center !important;
+        justify-content: flex-start !important;
         text-align: center !important;
     }
     
     /* 3 cards to 2 cards grid */
     .flex-column-mobile {
         flex-wrap: wrap !important;
-        justify-content: center !important;
+        justify-content: flex-start !important;
     }
     .flex-column-mobile > * {
-        flex: 1 1 calc(50% - var(--spacing-lg)) !important;
+        flex: 1 1 calc(50% - 16px) !important;
+        max-width: calc(50% - 16px);
         min-width: 300px;
     }
 }
@@ -665,3 +666,29 @@ body.light-theme .submenu-link.active {
 
 .gap-xl { gap: var(--spacing-xl); }
 .gap-xxl { gap: var(--spacing-xxl); }
+
+/* Card Layout Fix for Heading Alignment */
+.card h3,
+.card h4 {
+  min-height: 60px;
+}
+
+@media (max-width: 768px) {
+  .card h3,
+  .card h4 {
+    min-height: auto;
+  }
+}
+
+
+@media (max-width: 1024px) {
+    .stack-1024 {
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+    }
+    .stack-1024 > * {
+        flex: 1 1 100% !important;
+        width: 100% !important;
+    }
+}
