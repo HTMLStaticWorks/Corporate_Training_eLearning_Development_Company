@@ -58,15 +58,13 @@
                 <a href="contact.html" class="nav-link">Contact</a>
 
                 <!-- Mobile Actions (Inside Hamburger) -->
-                <div class="header-actions mobile-only-actions"
-                    style="margin-top: 1rem; width: 100%; justify-content: flex-start;">
-                    <button class="icon-btn" id="theme-toggle-mobile" aria-label="Toggle Dark Mode"><i
-                            class="ph ph-moon"></i></button>
-                    <a href="dashboard.html" class="icon-btn" aria-label="Dashboard"><i
-                            class="ph ph-squares-four"></i></a>
-                    <button class="icon-btn" id="rtl-toggle-mobile" aria-label="Toggle RTL"><i
-                            class="ph ph-arrows-left-right"></i></button>
-                    <a href="register.html" class="btn btn-primary" style="margin-left: auto;">Sign Up</a>
+                <div class="header-actions mobile-only-actions" style="margin-top: 1rem; width: 100%; display: flex; flex-direction: column; gap: 16px;">
+                    <div style="display: flex; gap: 16px; justify-content: center; width: 100%;">
+                        <button class="icon-btn" id="theme-toggle-mobile" aria-label="Toggle Dark Mode"><i class="ph ph-moon"></i></button>
+                        <a href="dashboard.html" class="icon-btn" aria-label="Dashboard"><i class="ph ph-squares-four"></i></a>
+                        <button class="icon-btn" id="rtl-toggle-mobile" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+                    </div>
+                    <a href="register.html" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center; margin: 0;">Sign Up</a>
                 </div>
             </nav>
 
@@ -141,7 +139,7 @@
                 </div>
             </div>
 
-            <div class="d-flex gap-lg flex-column-mobile justify-center" style="margin-top: var(--spacing-xxl); align-items: stretch;">
+            <div class="d-flex gap-lg flex-column-mobile justify-center" style="margin-top: var(--spacing-xxl); align-items: stretch; justify-content: center !important;">
                 <div class="card" style="flex: 1;  display: flex; flex-direction: column;">
                     <div class="icon-btn"
                         style="background: rgba(37,99,235,0.1); border-color: transparent; color: var(--color-primary); margin-bottom: var(--spacing-md);">
@@ -248,9 +246,9 @@
                             class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
                     </div>
                     <p>“The analytics helped us prove training ROI to leadership within the first quarter.”</p>
-                    <div class="d-flex align-center gap-md" style="margin-top: 16px;">
+                    <div class="d-flex align-center gap-sm" style="margin-top: 16px;">
                         <img src="https://i.pravatar.cc/150?u=mina"
-                            style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;" alt="Mina Patel">
+                            style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" alt="Mina Patel">
                         <div>
                             <h5 style="margin: 0;">Mina Patel</h5>
                             <span style="color: var(--text-secondary); font-size: 14px;">Head of Enablement,
@@ -264,9 +262,9 @@
                             class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
                     </div>
                     <p>“Our compliance training now feels modern, simple, and far easier to manage.”</p>
-                    <div class="d-flex align-center gap-md" style="margin-top: 16px;">
+                    <div class="d-flex align-center gap-sm" style="margin-top: 16px;">
                         <img src="https://i.pravatar.cc/150?u=jalen"
-                            style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;"
+                            style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex-shrink: 0;"
                             alt="Jalen Brooks">
                         <div>
                             <h5 style="margin: 0;">Jalen Brooks</h5>
