@@ -1,119 +1,115 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", function () {
 
-    // ==============================
+    // ==========================
     // Theme Toggle
-    // ==============================
-    const themeToggleBtns = document.querySelectorAll('#theme-toggle, #theme-toggle-mobile');
+    // ==========================
+    const themeBtns = document.querySelectorAll("#theme-toggle, #theme-toggle-mobile");
 
-    if (localStorage.getItem('theme') === 'light') {
-        document.body.classList.add('light-theme');
+    if (localStorage.getItem("theme") === "light") {
+        document.body.classList.add("light-theme");
     }
 
-    themeToggleBtns.forEach(btn => {
-        const icon = btn.querySelector('i');
+    function updateThemeIcons() {
+        const isLight = document.body.classList.contains("light-theme");
 
-        if (icon) {
-            icon.classList.toggle('ph-moon', document.body.classList.contains('light-theme'));
-            icon.classList.toggle('ph-sun', !document.body.classList.contains('light-theme'));
-        }
+        themeBtns.forEach(btn => {
+            const icon = btn.querySelector("i");
+            if (!icon) return;
 
-        btn.addEventListener('click', () => {
+            icon.classList.remove("ph-sun", "ph-moon");
+            icon.classList.add(isLight ? "ph-moon" : "ph-sun");
+        });
+    }
 
-            document.body.classList.toggle('light-theme');
+    updateThemeIcons();
 
-            const isLight = document.body.classList.contains('light-theme');
+    themeBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
 
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            document.body.classList.toggle("light-theme");
 
-            themeToggleBtns.forEach(button => {
-                const i = button.querySelector('i');
+            localStorage.setItem(
+                "theme",
+                document.body.classList.contains("light-theme")
+                    ? "light"
+                    : "dark"
+            );
 
-                if (!i) return;
-
-                i.classList.toggle('ph-moon', isLight);
-                i.classList.toggle('ph-sun', !isLight);
-            });
-
+            updateThemeIcons();
         });
     });
 
-    // ==============================
+
+    // ==========================
     // RTL Toggle
-    // ==============================
-    const rtlToggleBtns = document.querySelectorAll('#rtl-toggle, #rtl-toggle-mobile');
+    // ==========================
+    const rtlBtns = document.querySelectorAll("#rtl-toggle, #rtl-toggle-mobile");
     const html = document.documentElement;
 
-    html.setAttribute(
-        'dir',
-        localStorage.getItem('dir') === 'rtl' ? 'rtl' : 'ltr'
-    );
+    html.dir = localStorage.getItem("dir") || "ltr";
 
-    rtlToggleBtns.forEach(btn => {
+    rtlBtns.forEach(btn => {
 
-        btn.addEventListener('click', () => {
+        btn.addEventListener("click", () => {
 
-            const rtl = html.getAttribute('dir') === 'rtl';
+            html.dir = html.dir === "rtl" ? "ltr" : "rtl";
 
-            html.setAttribute('dir', rtl ? 'ltr' : 'rtl');
-
-            localStorage.setItem('dir', rtl ? 'ltr' : 'rtl');
+            localStorage.setItem("dir", html.dir);
 
         });
 
     });
 
-    // ==============================
+
+    // ==========================
     // Mobile Menu
-    // ==============================
-    const menuToggle = document.getElementById('mobile-menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    // ==========================
+    const menuToggle = document.getElementById("mobile-menu-toggle");
+    const navMenu = document.querySelector(".nav-menu");
 
     if (menuToggle && navMenu) {
 
-        menuToggle.addEventListener('click', function () {
+        menuToggle.addEventListener("click", function () {
 
-            navMenu.classList.toggle('nav-open');
+            menuToggle.classList.toggle("active");
 
-            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle("nav-open");
 
-            document.body.classList.toggle('menu-open');
+            document.body.classList.toggle("menu-open");
 
         });
 
     }
 
-    // ==============================
+
+    // ==========================
     // Home Dropdown
-    // ==============================
-    const homeItem = document.querySelector('.nav-item.has-submenu');
-    const homeLink = document.querySelector('.nav-link-home');
+    // ==========================
+    const homeItem = document.querySelector(".nav-item.has-submenu");
+    const homeLink = document.querySelector(".nav-link-home");
 
     if (homeItem && homeLink) {
 
-        homeLink.addEventListener('click', function (e) {
+        homeLink.addEventListener("click", function (e) {
 
-            if (window.innerWidth <= 991) {
+            e.preventDefault();
 
-                e.preventDefault();
+            homeItem.classList.toggle("open");
 
-                homeItem.classList.toggle('open');
-
-                homeLink.setAttribute(
-                    'aria-expanded',
-                    homeItem.classList.contains('open')
-                );
-
-            }
+            homeLink.setAttribute(
+                "aria-expanded",
+                homeItem.classList.contains("open")
+            );
 
         });
 
-        document.addEventListener('click', function (e) {
+        document.addEventListener("click", function (e) {
 
             if (!homeItem.contains(e.target)) {
 
-                homeItem.classList.remove('open');
+                homeItem.classList.remove("open");
 
-                homeLink.setAttribute('aria-expanded', 'false');
+                homeLink.setAttribute("aria-expanded", "false");
 
             }
 
@@ -121,44 +117,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    // ==============================
+
+    // ==========================
     // Scroll To Top
-    // ==============================
-    let scrollTopBtn = document.getElementById('scroll-top');
+    // ==========================
+    let scrollTop = document.getElementById("scroll-top");
 
-    if (!scrollTopBtn) {
+    if (!scrollTop) {
 
-        scrollTopBtn = document.createElement('button');
+        scrollTop = document.createElement("button");
 
-        scrollTopBtn.id = 'scroll-top';
+        scrollTop.id = "scroll-top";
 
-        scrollTopBtn.className = 'scroll-top';
+        scrollTop.className = "scroll-top";
 
-        scrollTopBtn.setAttribute('aria-label', 'Scroll to top');
+        scrollTop.innerHTML = '<i class="ph ph-arrow-up"></i>';
 
-        scrollTopBtn.innerHTML = '<i class="ph ph-arrow-up"></i>';
-
-        document.body.appendChild(scrollTopBtn);
+        document.body.appendChild(scrollTop);
 
     }
 
-    function toggleScrollTop() {
+    function toggleScrollButton() {
 
-        scrollTopBtn.classList.toggle('show', window.scrollY > 500);
+        if (window.scrollY > 500) {
+
+            scrollTop.classList.add("show");
+
+        } else {
+
+            scrollTop.classList.remove("show");
+
+        }
 
     }
 
-    toggleScrollTop();
+    toggleScrollButton();
 
-    window.addEventListener('scroll', toggleScrollTop);
+    window.addEventListener("scroll", toggleScrollButton);
 
-    scrollTopBtn.addEventListener('click', function () {
+    scrollTop.addEventListener("click", function () {
 
         window.scrollTo({
 
             top: 0,
 
-            behavior: 'smooth'
+            behavior: "smooth"
 
         });
 
