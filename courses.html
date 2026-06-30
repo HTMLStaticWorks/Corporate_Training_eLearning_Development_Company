@@ -57,14 +57,17 @@
 
                 <!-- Mobile Actions (Inside Hamburger) -->
                 <div class="header-actions mobile-only-actions"
-                    style="margin-top: 1rem; width: 100%; justify-content: flex-start;">
-                    <button class="icon-btn" id="theme-toggle-mobile" aria-label="Toggle Dark Mode"><i
-                            class="ph ph-moon"></i></button>
-                    <a href="dashboard.html" class="icon-btn" aria-label="Dashboard"><i
-                            class="ph ph-squares-four"></i></a>
-                    <button class="icon-btn" id="rtl-toggle-mobile" aria-label="Toggle RTL"><i
-                            class="ph ph-arrows-left-right"></i></button>
-                    <a href="register.html" class="btn btn-primary" style="margin-left: auto;">Sign Up</a>
+                    style="margin-top: 1rem; width: 100%; display: flex; flex-direction: column; gap: 16px;">
+                    <div style="display: flex; gap: 16px; justify-content: center; width: 100%;">
+                        <button class="icon-btn" id="theme-toggle-mobile" aria-label="Toggle Dark Mode"><i
+                                class="ph ph-moon"></i></button>
+                        <a href="dashboard.html" class="icon-btn" aria-label="Dashboard"><i
+                                class="ph ph-squares-four"></i></a>
+                        <button class="icon-btn" id="rtl-toggle-mobile" aria-label="Toggle RTL"><i
+                                class="ph ph-arrows-left-right"></i></button>
+                    </div>
+                    <a href="register.html" class="btn btn-primary"
+                        style="width: 100%; text-align: center; justify-content: center; margin: 0;">Sign Up</a>
                 </div>
             </nav>
 
@@ -116,9 +119,20 @@
 
     <section class="section">
         <style>
-            .courses-catalog .card { display: flex; flex-direction: column; }
-            .courses-catalog .card h4 { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 8px; }
-            .courses-catalog .card .btn { margin-top: auto; }
+            .courses-catalog .card {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .courses-catalog .card h4 {
+                margin-bottom: 8px;
+                min-height: auto !important;
+            }
+
+            .courses-catalog .card .btn {
+                margin-top: auto;
+                border: 1px solid var(--color-primary);
+            }
         </style>
         <div class="container courses-catalog">
             <div class="text-center" style="margin-bottom: var(--spacing-xl);">
@@ -164,7 +178,7 @@
                     <div
                         style="aspect-ratio: 16/9; height: auto; background: #e2e8f0; border-radius: calc(var(--radius-lg) - 1px) calc(var(--radius-lg) - 1px) 0 0; margin: calc(-1 * var(--spacing-lg)) calc(-1 * var(--spacing-lg)) 20px calc(-1 * var(--spacing-lg)); background: url('assets/images/course4.png') center/cover;">
                     </div>
-                    <h4>Advanced Project Management</h4>
+                    <h4> Project Management</h4>
                     <p style="font-size: 14px; margin-bottom: 16px;">Master agile methodologies and deliver complex
                         projects on time and within budget.</p>
                     <a href="course-details.html" class="btn btn-secondary"
@@ -232,7 +246,7 @@
                     <div
                         style="aspect-ratio: 16/9; height: auto; background: #e2e8f0; border-radius: calc(var(--radius-lg) - 1px) calc(var(--radius-lg) - 1px) 0 0; margin: calc(-1 * var(--spacing-lg)) calc(-1 * var(--spacing-lg)) 20px calc(-1 * var(--spacing-lg)); background: url('assets/images/course10.png') center/cover;">
                     </div>
-                    <h4>Financial Literacy for Managers</h4>
+                    <h4>Financial Literacy Managers</h4>
                     <p style="font-size: 14px; margin-bottom: 16px;">Understand P&L statements, budgeting, and
                         forecasting to lead your division effectively.</p>
                     <a href="course-details.html" class="btn btn-secondary"
