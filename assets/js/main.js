@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // Intercept nav links and show home page content while updating URL
+    // Intercept nav links and dynamically load target page content
     function interceptNavLinks(){
         const links = document.querySelectorAll('.nav-menu a');
         links.forEach(a => {
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if(!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
                 e.preventDefault();
                 try{
-                    const res = await fetch('index.html');
+                    const res = await fetch(href);
                     if(!res.ok) return window.location.href = href;
                     const text = await res.text();
                     const parser = new DOMParser();
