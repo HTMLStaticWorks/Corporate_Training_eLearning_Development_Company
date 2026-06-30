@@ -605,7 +605,7 @@ body.light-theme .submenu-link.active {
         text-align: center !important;
     }
     .nav-link, .mobile-only.nav-link {
-        justify-content: flex-start !important;
+        justify-content: center !important;
         text-align: center !important;
     }
     
