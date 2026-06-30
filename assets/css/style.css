@@ -8,15 +8,15 @@
   --bg-primary: #071826;
   --bg-secondary: #102537;
   --bg-card: #162F45;
-  
+
   --color-primary: #2563EB;
   --color-secondary: #06B6D4;
   --color-accent: #22C55E;
   --color-highlight: #F59E0B;
-  
+
   --text-primary: #F8FAFC;
   --text-secondary: #CBD5E1;
-  
+
   --border-color: rgba(255, 255, 255, 0.08);
   --glow-color: rgba(37, 99, 235, 0.16);
   --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -37,13 +37,13 @@
   --spacing-lg: 32px;
   --spacing-xl: 48px;
   --spacing-xxl: 80px;
-  
+
   /* Border Radius */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
-  
+
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
@@ -54,15 +54,15 @@ body.light-theme {
   --bg-primary: #F8FAFC;
   --bg-secondary: #F1F5F9;
   --bg-card: #FFFFFF;
-  
+
   --color-primary: #2563EB;
   --color-secondary: #06B6D4;
   --color-accent: #22C55E;
   --color-highlight: #F59E0B;
-  
+
   --text-primary: #0F172A;
   --text-secondary: #475569;
-  
+
   --border-color: rgba(0, 0, 0, 0.1);
   --glow-color: rgba(37, 99, 235, 0.16);
   --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -94,19 +94,41 @@ body {
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: var(--fw-semibold);
   line-height: 1.2;
   color: var(--text-primary);
   margin-bottom: var(--spacing-sm);
 }
 
-h1 { font-size: 68px; }
-h2 { font-size: 42px; }
-h3 { font-size: 30px; }
-h4 { font-size: 24px; }
-h5 { font-size: 20px; }
-h6 { font-size: 18px; }
+h1 {
+  font-size: 68px;
+}
+
+h2 {
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
 
 p {
   color: var(--text-secondary);
@@ -149,15 +171,41 @@ img {
   padding: var(--spacing-xxl) 0;
 }
 
-.text-center { text-align: center; }
-.d-flex { display: flex; }
-.align-center { align-items: center; }
-.justify-between { justify-content: space-between; }
-.justify-center { justify-content: center; }
-.flex-column { flex-direction: column; }
-.gap-sm { gap: var(--spacing-sm); }
-.gap-md { gap: var(--spacing-md); }
-.gap-lg { gap: var(--spacing-lg); }
+.text-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.gap-sm {
+  gap: var(--spacing-sm);
+}
+
+.gap-md {
+  gap: var(--spacing-md);
+}
+
+.gap-lg {
+  gap: var(--spacing-lg);
+}
 
 /* ==========================================================================
    4. UI Components
@@ -220,7 +268,8 @@ img {
   border: 1px solid var(--border-color);
   box-shadow: var(--card-shadow);
   transition: all var(--transition-normal);
-  display: flex; flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -248,8 +297,17 @@ img {
   letter-spacing: 0.5px;
 }
 
-.badge-success { background: rgba(34, 197, 94, 0.1); color: var(--color-accent); border: 1px solid rgba(34, 197, 94, 0.2); }
-.badge-primary { background: rgba(37, 99, 235, 0.1); color: var(--color-primary); border: 1px solid rgba(37, 99, 235, 0.2); }
+.badge-success {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--color-accent);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.badge-primary {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--color-primary);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
 
 /* ==========================================================================
    5. Header & Navigation
@@ -280,7 +338,7 @@ body.light-theme .nav-link {
   color: #475569;
 }
 
-body.light-theme .nav-link:hover, 
+body.light-theme .nav-link:hover,
 body.light-theme .nav-link.active,
 body.light-theme .icon-btn {
   color: #0f172a;
@@ -327,7 +385,8 @@ body.light-theme .icon-btn {
   gap: 6px;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
   color: var(--text-primary);
 }
 
@@ -342,7 +401,8 @@ body.light-theme .icon-btn {
   transition: width var(--transition-fast);
 }
 
-.nav-link:hover::after, .nav-link.active::after {
+.nav-link:hover::after,
+.nav-link.active::after {
   width: 100%;
 }
 
@@ -371,14 +431,15 @@ body.light-theme .icon-btn {
   border-radius: 6px;
 }
 
-.submenu-link:hover, .submenu-link.active {
+.submenu-link:hover,
+.submenu-link.active {
   color: var(--text-primary);
-  background: rgba(255,255,255,0.06);
+  background: rgba(255, 255, 255, 0.06);
 }
 
-body.light-theme .submenu-link:hover, 
+body.light-theme .submenu-link:hover,
 body.light-theme .submenu-link.active {
-  background: rgba(0,0,0,0.05);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .mobile-menu-toggle {
@@ -513,11 +574,22 @@ body.light-theme .submenu-link.active {
    7. Responsive Styles
    ========================================================================== */
 @media (max-width: 1024px) {
-  h1 { font-size: 50px; }
-  h2 { font-size: 36px; }
-  h3 { font-size: 26px; }
+  h1 {
+    font-size: 50px;
+  }
 
-  .mobile-menu-toggle { display: inline-flex; }
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
+  }
+
   .nav-menu {
     position: absolute;
     top: 80px;
@@ -535,60 +607,126 @@ body.light-theme .submenu-link.active {
   .mobile-only-actions {
     justify-content: flex-start !important;
   }
+
   .mobile-only-actions .btn {
     margin-left: 0 !important;
   }
 
-  .nav-menu.nav-open { display: flex; }
-  .nav-item { width: 100%; }
-  .nav-link { width: 100%; justify-content: space-between; }
+  .nav-menu.nav-open {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+    justify-content: space-between;
+  }
+
   .submenu {
     position: static;
     margin-top: 8px;
     display: none;
     border: none;
-    background: rgba(255,255,255,0.04);
+    background: rgba(255, 255, 255, 0.04);
   }
-  .nav-item.open .submenu { display: flex; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+
+  .nav-item.open .submenu {
+    display: flex;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 768px) {
-  h1 { font-size: 40px; }
-  h2 { font-size: 30px; }
-  h3 { font-size: 22px; }
-  
-  .section { padding: var(--spacing-xl) 0; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; gap: var(--spacing-sm); text-align: center; }
-  .header-actions .btn { display: none; }
-  .header-actions { gap: 10px; }
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  .section {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    text-align: center;
+  }
+
+  .header-actions .btn {
+    display: none;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
 }
 
 .social-links a:hover i {
   color: var(--color-primary);
 }
 
-.mobile-only-actions { display: none; }
-@media (max-width: 1024px) {
-  .header-actions:not(.mobile-only-actions) { display: none !important; }
-  .mobile-only-actions { display: flex !important; }
+.mobile-only-actions {
+  display: none;
 }
 
-.mobile-only { display: none !important; }
-.mobile-only-actions { display: none !important; }
 @media (max-width: 1024px) {
-    .desktop-only { display: none !important; }
-    .desktop-actions { display: none !important; }
-    .mobile-only { display: flex !important; }
-    .mobile-only-actions { display: flex !important; }
-    
-    /* Ensure the mobile nav links look like normal nav links */
-    .mobile-only.nav-link {
-        width: 100%;
-        justify-content: flex-start;
-        padding: 12px 16px;
-    }
+  .header-actions:not(.mobile-only-actions) {
+    display: none !important;
+  }
+
+  .mobile-only-actions {
+    display: flex !important;
+  }
+}
+
+.mobile-only {
+  display: none !important;
+}
+
+.mobile-only-actions {
+  display: none !important;
+}
+
+@media (max-width: 1024px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .desktop-actions {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: flex !important;
+  }
+
+  .mobile-only-actions {
+    display: flex !important;
+  }
+
+  /* Ensure the mobile nav links look like normal nav links */
+  .mobile-only.nav-link {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 12px 16px;
+  }
 }
 
 .hover-underline:hover {
@@ -599,81 +737,93 @@ body.light-theme .submenu-link.active {
    8. Enhanced Responsive Adjustments
    ========================================================================== */
 @media (max-width: 1024px) {
-    /* Hamburger menus align center */
-    .nav-menu {
-        align-items: center !important;
-        text-align: center !important;
-    }
-    .nav-link, .mobile-only.nav-link {
-        justify-content: center !important;
-        text-align: center !important;
-    }
-    
-    /* 3 cards to 2 cards grid */
-    .flex-column-mobile {
-        flex-wrap: wrap !important;
-        justify-content: flex-start !important;
-    }
-    .flex-column-mobile > * {
-        flex: 1 1 calc(50% - 16px) !important;
-        max-width: calc(50% - 16px);
-        min-width: 300px;
-    }
+
+  /* Hamburger menus align center */
+  .nav-menu {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .nav-link,
+  .mobile-only.nav-link {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* 3 cards to 2 cards grid */
+  .flex-column-mobile {
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+  }
+
+  .flex-column-mobile>* {
+    flex: 1 1 calc(50% - 16px) !important;
+    max-width: calc(50% - 16px);
+    min-width: 300px;
+  }
 }
 
 @media (max-width: 768px) {
-    /* 1 card per row */
-    .flex-column-mobile {
-        flex-direction: column !important;
-        flex-wrap: nowrap !important;
-    }
-    .flex-column-mobile > * {
-        flex: 1 1 100% !important;
-        min-width: 100% !important;
-        width: 100% !important;
-    }
-    
-    /* Buttons one by one same size */
-    .btn {
-        width: 100% !important;
-        text-align: center !important;
-        display: block !important;
-        box-sizing: border-box;
-    }
-    
-    /* Fix flex rows that contain buttons to be columns on mobile */
-    .d-flex:has(> .btn) {
-        flex-direction: column !important;
-        width: 100% !important;
-    }
 
-    /* Force all major layout columns to stack one by one on mobile */
-    .d-flex.gap-md, 
-    .d-flex.gap-lg, 
-    .d-flex.gap-xl, 
-    .d-flex.gap-xxl {
-        flex-direction: column !important;
-    }
-    
-    .d-flex.gap-md > *, 
-    .d-flex.gap-lg > *, 
-    .d-flex.gap-xl > *, 
-    .d-flex.gap-xxl > * {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
+  /* 1 card per row */
+  .flex-column-mobile {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .flex-column-mobile>* {
+    flex: 1 1 100% !important;
+    min-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Buttons one by one same size */
+  .btn {
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+    box-sizing: border-box;
+  }
+
+  /* Fix flex rows that contain buttons to be columns on mobile */
+  .d-flex:has(> .btn) {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  /* Force all major layout columns to stack one by one on mobile */
+  .d-flex.gap-md,
+  .d-flex.gap-lg,
+  .d-flex.gap-xl,
+  .d-flex.gap-xxl {
+    flex-direction: column !important;
+  }
+
+  .d-flex.gap-md>*,
+  .d-flex.gap-lg>*,
+  .d-flex.gap-xl>*,
+  .d-flex.gap-xxl>* {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 }
 
-.gap-xl { gap: var(--spacing-xl); }
-.gap-xxl { gap: var(--spacing-xxl); }
+.gap-xl {
+  gap: var(--spacing-xl);
+}
+
+.gap-xxl {
+  gap: var(--spacing-xxl);
+}
 
 /* Card Layout Fix for Heading Alignment */
 .card h3,
 .card h4 {
-  min-height: 60px;
+  min-height: 72px;
 }
 
 @media (max-width: 768px) {
+
   .card h3,
   .card h4 {
     min-height: auto;
@@ -682,13 +832,45 @@ body.light-theme .submenu-link.active {
 
 
 @media (max-width: 1024px) {
-    .stack-1024 {
-        flex-direction: column !important;
-        flex-wrap: nowrap !important;
-        align-items: center !important;
-    }
-    .stack-1024 > * {
-        flex: 1 1 100% !important;
-        width: 100% !important;
-    }
+  .stack-1024 {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+  }
+
+  .stack-1024>* {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+  }
+}
+
+/* Blog Grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+@media (max-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card alignment for Read More */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card>a:last-child {
+  margin-top: auto;
 }
