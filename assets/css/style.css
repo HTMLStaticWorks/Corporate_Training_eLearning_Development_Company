@@ -816,18 +816,40 @@ body.light-theme .submenu-link.active {
   gap: var(--spacing-xxl);
 }
 
-/* Card Layout Fix for Heading Alignment */
+/* Card Layout Fix for Heading Alignment - Removed per user request */
 .card h3,
 .card h4 {
-  min-height: 72px;
+  /* min-height: 72px; */
 }
 
 @media (max-width: 768px) {
-
   .card h3,
   .card h4 {
-    min-height: auto;
+    /* min-height: auto; */
   }
+}
+
+.methodology-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .methodology-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-2-to-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .grid-2-to-1 {
+    grid-template-columns: 1fr;
+  }
+}
 }
 
 
@@ -892,4 +914,65 @@ body.light-theme .submenu-link.active {
   .industries-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Custom 5-column grid for Home 1 */
+.industries-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+@media (max-width: 1024px) {
+  .industries-grid-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .industries-grid-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .industries-grid-5 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Accordion Component */
+.accordion-details { 
+  background: var(--bg-card); 
+  margin-bottom: 16px; 
+  border-radius: var(--radius-sm); 
+  border: 1px solid var(--border-color); 
+  overflow: hidden; 
+}
+.accordion-details summary { 
+  padding: 24px; 
+  font-size: 20px; 
+  font-weight: 600; 
+  cursor: pointer; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  list-style: none; 
+  outline: none; 
+  transition: background 0.2s; 
+}
+.accordion-details summary::-webkit-details-marker { 
+  display: none; 
+}
+.accordion-details summary:hover { 
+  background: rgba(255,255,255,0.02); 
+}
+.accordion-details[open] summary { 
+  border-bottom: 1px solid var(--border-color); 
+}
+.accordion-details[open] summary i { 
+  transform: rotate(180deg); 
+}
+.accordion-details p { 
+  padding: 24px; 
+  color: var(--text-secondary); 
+  margin: 0; 
+  line-height: 1.6; 
 }
