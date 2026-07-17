@@ -850,7 +850,7 @@ body.light-theme .submenu-link.active {
     grid-template-columns: 1fr;
   }
 }
-}
+
 
 
 @media (max-width: 1024px) {
